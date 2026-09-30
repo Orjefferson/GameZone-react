@@ -20,4 +20,11 @@
     --gz-section-y: 3rem;
     --gz-wrap: 1160px;
     --gz-header-h: 72px;
+
+    --gz-btn-face: #cbb6f0;
+    --gz-btn-border: #8b8b8b;
+    --gz-btn-border-light: #ffffff;
+    --gz-btn-border-dark: #666666;
+
+    --gz-btn-shadow: inset 0 0 30px 0 var(--gz-purple-bright);
   }

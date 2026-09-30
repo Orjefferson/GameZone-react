@@ -11,6 +11,14 @@
   }
   
   /* Navbar */
+  .gz-navbar .container-fluid {
+    max-width: var(--gz-wrap);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .gz-navbar {
     background-color: var(--gz-bg) !important;
     position: sticky;
@@ -62,16 +70,36 @@
     color: var(--gz-purple);
   }
   
-  /* Footer */
+  /* Footer — alinhado ao style.css original */
   .gz-footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 24px;
-    padding: 40px 16px;
-    background-color: var(--gz-bg);
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-width: var(--gz-wrap);
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    background-color: var(--gz-bg-elevated);
     color: var(--gz-text);
+  }
+  
+  .gz-foot-col {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  .gz-footer p {
+    font-size: 14px;
     font-family: var(--gz-font-body);
+    margin-bottom: 0;
+  }
+  
+  .gz-footer h4 {
+    font-family: var(--gz-font-display);
+    margin-bottom: 8px;
   }
   
   .gz-footer a {
@@ -83,18 +111,69 @@
     color: var(--gz-purple);
   }
   
-  .gz-footer img.gz-logo {
-    height: 70px;
+  .gz-foot-logo {
+    max-width: 250px;
+    height: auto;
   }
   
   .gz-social {
     display: flex;
-    gap: 12px;
-    margin-top: 12px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 250px; /* mesma largura do logo */
+    margin: 15px auto 0;
   }
   
   .gz-social img {
-    width: 28px;
-    height: 28px;
+    height: 20px;
+    width: auto;
     filter: invert(100%);
+  }
+  
+  .gz-newsletter {
+    margin-top: 20px;
+  }
+  
+  .gz-newsletter #email {
+    background-color: var(--gz-bg-elevated);
+    box-shadow: 0 0 10px 1px var(--gz-purple-bright);
+    border: none;
+    outline: none;
+    width: 80%;
+    max-width: none;
+    border-radius: 0;
+    padding: 3px 6px;
+    height: 30px;
+    color: var(--gz-text);
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+  
+  .gz-newsletter #send {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 0;
+    /* simula o botão padrão do HTML antigo (Bootstrap reseta isso) */
+    border: 1px solid var(--gz-btn-border);
+    border-top-color: var(--gz-btn-border-light);
+    border-left-color: var(--gz-btn-border-light);
+    border-right-color: var(--gz-btn-border-dark);
+    border-bottom-color: var(--gz-btn-border-dark);
+    background-color: var(--gz-btn-face);
+    box-shadow: inset 0 0 30px 0 var(--gz-purple-bright);    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .gz-newsletter #send img {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    display: block;
   }
