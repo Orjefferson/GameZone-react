@@ -1,0 +1,100 @@
+/* Container padrão das seções */
+.gz-wrap {
+    max-width: var(--gz-wrap);
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .gz-section {
+    padding-block: var(--gz-section-y);
+    scroll-margin-top: var(--gz-header-h);
+  }
+  
+  /* Navbar */
+  .gz-navbar {
+    background-color: var(--gz-bg) !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: var(--gz-header-h);
+  }
+  
+  .gz-navbar .navbar-brand img,
+  .gz-logo {
+    height: 70px;
+  }
+  
+  .gz-navbar .nav-link {
+    color: var(--gz-text) !important;
+    padding: 15px !important;
+  }
+  
+  .gz-navbar .nav-link:hover,
+  .gz-navbar .nav-link.active {
+    color: var(--gz-purple) !important;
+    box-shadow: inset 0 -1px 0 0 var(--gz-purple);
+  }
+  
+  .gz-navbar .navbar-toggler {
+    box-shadow: 0 0 3px 3px var(--gz-purple);
+    border: none;
+  }
+  
+  .gz-navbar .navbar-toggler-icon {
+    background-image: url("/img/burger-bar.png");
+    background-size: 30px 30px;
+    background-position: center;
+    filter: invert(100%);
+  }
+  
+  .gz-user-btn {
+    border: 2px solid var(--gz-purple-bright);
+    border-radius: var(--gz-radius);
+    padding: 12px;
+    background-color: var(--gz-bg);
+    color: var(--gz-text);
+    box-shadow: var(--gz-glow);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .gz-user-btn:hover {
+    color: var(--gz-purple);
+  }
+  
+  /* Footer */
+  .gz-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+    padding: 40px 16px;
+    background-color: var(--gz-bg);
+    color: var(--gz-text);
+    font-family: var(--gz-font-body);
+  }
+  
+  .gz-footer a {
+    color: var(--gz-text);
+    text-decoration: none;
+  }
+  
+  .gz-footer a:hover {
+    color: var(--gz-purple);
+  }
+  
+  .gz-footer img.gz-logo {
+    height: 70px;
+  }
+  
+  .gz-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  .gz-social img {
+    width: 28px;
+    height: 28px;
+    filter: invert(100%);
+  }
