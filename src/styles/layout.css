@@ -158,7 +158,7 @@
     vertical-align: middle;
     border-radius: 0;
     /* simula o botão padrão do HTML antigo (Bootstrap reseta isso) */
-    border: 1px solid var(--gz-btn-border);
+    border: 2px solid var(--gz-btn-border);
     border-top-color: var(--gz-btn-border-light);
     border-left-color: var(--gz-btn-border-light);
     border-right-color: var(--gz-btn-border-dark);
