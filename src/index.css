@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: #000;
-  color: #fff;
-  font-family: system-ui, sans-serif;
+  background: var(--gz-bg);
+  color: var(--gz-text);
+  font-family: var(--gz-font-display);
 }
