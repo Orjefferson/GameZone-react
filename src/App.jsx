@@ -1,17 +1,16 @@
 import AppNavbar from './components/Navbar'
 import Footer from './components/Footer'
+import Hero from './sections/Hero'
 
 function App() {
   return (
     <>
-      <div id="topo" />
       <AppNavbar />
       <main>
-        <p className="gz-wrap gz-section">Conteúdo das seções entra aqui.</p>
+        <Hero />
       </main>
       <Footer />
     </>
   )
 }
-
 export default App

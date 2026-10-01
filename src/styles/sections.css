@@ -1,0 +1,83 @@
+.gz-hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 360px;
+    background-image: url("/img/bannerhome.png");
+    background-size: cover;
+    background-position: center;
+    animation: gz-pan-bg 5s 1 forwards;
+  }
+  
+  @keyframes gz-pan-bg {
+    from { background-position: top; }
+    to { background-position: center; }
+  }
+  
+  .gz-hero-text {
+    padding-bottom: 20px;
+    background-color: var(--gz-bg);
+    box-shadow: 0 20px 20px 16px var(--gz-bg);
+    height: 100%;
+    align-content: flex-end;
+  }
+  
+  .gz-hero-kicker {
+    color: var(--gz-purple-bright);
+    font-family: var(--gz-font-display); /* Bebas Neue */
+    font-weight: 300;
+  }
+  
+  .gz-hero h1 {
+    font-family: var(--gz-font-title); /* Tektur — era o h1 do original */
+    font-size: 50px;
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  .gz-hero h1 .gz-accent,
+  .gz-hero h2 .gz-accent,
+  .gz-hero-kicker {
+    color: var(--gz-purple-bright);
+    font-weight: 300;
+  }
+  
+  .gz-hero h2 {
+    font-family: var(--gz-font-display); /* Bebas Neue */
+    font-size: 1.5rem; /* aproxima o peso visual do original */
+    margin: 0.4rem 0;
+  }
+  
+  .gz-hero p {
+    font-family: var(--gz-font-display); /* Bebas Neue, NÃO Gill Sans */
+    font-size: 18px;
+    color: var(--gz-text);
+    max-width: 420px;
+    margin: 0.75rem 0;
+  }
+  
+  .gz-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .gz-hero-character {
+    max-height: 340px;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .gz-hero {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      min-height: 360px;
+    }
+  
+    .gz-hero-character {
+      max-height: 220px;
+    }
+  }
