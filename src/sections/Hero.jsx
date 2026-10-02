@@ -1,7 +1,8 @@
 export default function Hero() {
-    return (
-      <section className="gz-hero" id="topo" aria-label="Apresentação">
-        <div className="gz-hero-text col-lg-4 col-sm-6">
+  return (
+    <section className="gz-hero" id="topo" aria-label="Apresentação">
+      <div className="gz-hero-inner">
+        <div className="gz-hero-text">
           <span className="gz-hero-kicker">Bem vindo à</span>
           <h1>
             Game<span className="gz-accent">zone.</span>
@@ -22,6 +23,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
+
         <div>
           <img
             className="gz-hero-character"
@@ -29,6 +31,7 @@ export default function Hero() {
             alt="Personagem em destaque da GameZone"
           />
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )
+}
