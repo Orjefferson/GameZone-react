@@ -6,10 +6,12 @@
     --gz-purple-bright: #7c2bf5;
     --gz-lilac: #c9a5ff;
     --gz-border: #233571;
+    --gz-border-glow: color-mix(in srgb, var(--gz-border) 66%, transparent);
     --gz-text: #fff;
     --gz-text-muted: #c9b8e8;
     --gz-text-dim: #9a88c4;
-  
+    --gz-mask-fade: color-mix(in srgb, var(--gz-bg) 35%, transparent);
+
     --gz-font-display: "Bebas Neue", sans-serif;
     --gz-font-title: "Tektur", sans-serif;
     --gz-font-body: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -20,6 +22,7 @@
     --gz-section-y: 3rem;
     --gz-wrap: 1160px;
     --gz-header-h: 72px;
+    --gz-banner-h: 360px;
 
     --gz-btn-face: #cbb6f0;
     --gz-btn-border: #8b8b8b;
