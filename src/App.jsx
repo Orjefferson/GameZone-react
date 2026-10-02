@@ -1,24 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppNavbar from './components/Navbar'
 import Footer from './components/Footer'
-import Hero from './sections/Hero'
-import Lancamentos from './sections/Lancamentos'
-import Generos from './sections/Generos'
-import Noticias from './sections/Noticias'
-import ChamadaFinal from './sections/ChamadaFinal'
+import ScrollToHash from './components/ScrollToHash'
+import LandingPage from './pages/LandingPage'
+import Comunidade from './pages/Comunidade'
 
-function App() {
+export default function App() {
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToHash />
       <AppNavbar />
-      <main>
-        <Hero />
-        <Lancamentos />
-        <Generos />
-        <Noticias />
-        <ChamadaFinal />
-      </main>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/comunidade" element={<Comunidade />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   )
 }
-export default App
