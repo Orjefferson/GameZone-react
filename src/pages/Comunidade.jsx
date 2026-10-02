@@ -57,11 +57,29 @@ export default function Comunidade() {
               ))}
             </div>
 
-            <Accordion>
-              {topicosFiltrados.map((t) => (
-                <TopicoForum key={t.id} topico={t} eventKey={t.id} />
-              ))}
-            </Accordion>
+            {topicosFiltrados.length === 0 ? (
+              <div className="gz-empty" role="status">
+                <i className="bi bi-chat-dots gz-empty-icon" aria-hidden="true" />
+                <h2 className="gz-empty-title">Nenhum tópico encontrado</h2>
+                <p className="gz-empty-text">
+                  Não há discussões na categoria <strong>{filtro}</strong> no
+                  momento.
+                </p>
+                <button
+                  type="button"
+                  className="btn_outglow"
+                  onClick={() => setFiltro('Todos')}
+                >
+                  Ver todos os tópicos
+                </button>
+              </div>
+            ) : (
+              <Accordion>
+                {topicosFiltrados.map((t) => (
+                  <TopicoForum key={t.id} topico={t} eventKey={t.id} />
+                ))}
+              </Accordion>
+            )}
           </Tab>
 
           <Tab

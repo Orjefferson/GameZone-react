@@ -147,4 +147,15 @@ export const enquetes = [
       { id: "mobile", label: "Mobile", votos: 8 },
     ],
   },
+  {
+    id: "competitivo",
+    titulo: "Jogo competitivo favorito",
+    status: "Encerrada",
+    descricao: "Qual título competitivo a galera mais joga no momento.",
+    opcoes: [
+      { id: "valorant", label: "Valorant", votos: 37 },
+      { id: "cs2", label: "Counter-Strike 2", votos: 33 },
+      { id: "lol", label: "League of Legends", votos: 30 },
+    ],
+  },
 ];
