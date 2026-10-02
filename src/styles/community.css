@@ -3,47 +3,6 @@
     margin: 0 auto;
     padding: 20px 16px 40px;
   }
-
-  .gz-empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 10px;
-    min-height: 220px;
-    padding: 32px 20px;
-    border: 1px dashed var(--gz-border);
-    border-radius: var(--gz-radius-lg);
-    background: var(--gz-bg-elevated);
-    box-shadow: inset 0 0 40px 0 var(--gz-border-glow);
-  }
-
-  .gz-empty-icon {
-    font-size: 2rem;
-    color: var(--gz-purple-bright);
-    filter: drop-shadow(0 0 8px var(--gz-purple-bright));
-  }
-
-  .gz-empty-title {
-    font-family: var(--gz-font-title);
-    font-size: 1.35rem;
-    margin: 0;
-    color: var(--gz-text);
-  }
-
-  .gz-empty-text {
-    font-family: var(--gz-font-body);
-    font-size: 14px;
-    color: var(--gz-text-muted);
-    margin: 0 0 8px;
-    max-width: 360px;
-  }
-
-  .gz-empty-text strong {
-    color: var(--gz-lilac);
-    font-weight: 600;
-  }
   
   .gz-community-hero {
     margin: 20px auto 10px;

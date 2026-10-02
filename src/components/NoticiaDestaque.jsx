@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
+
 export default function NoticiaDestaque({ noticia }) {
-  if (!noticia) return null
+  if (!noticia) return null;
 
   return (
     <article className="gz-news-featured">
@@ -13,7 +15,8 @@ export default function NoticiaDestaque({ noticia }) {
           <p>{noticia.resumo}</p>
           <div className="gz-news-meta">
             <time dateTime={noticia.data}>
-              <i className="bi bi-calendar3" aria-hidden="true" /> {noticia.dataLabel}
+              <i className="bi bi-calendar3" aria-hidden="true" />{" "}
+              {noticia.dataLabel}
             </time>
             <span>
               <i className="bi bi-person" aria-hidden="true" /> {noticia.autor}
@@ -23,11 +26,10 @@ export default function NoticiaDestaque({ noticia }) {
             </span>
           </div>
         </div>
-        {/* depois: /noticias/gta-vi */}
-        <a href="#noticias" className="btn_purp">
+        <Link to="/noticias/gta-vi" className="btn_purp">
           Ler matéria &gt;
-        </a>
+        </Link>
       </div>
     </article>
-  )
+  );
 }

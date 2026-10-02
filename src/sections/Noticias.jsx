@@ -13,6 +13,9 @@ export default function Noticias() {
     [],
   )
 
+  const mostrarDestaque =
+    destaque && (filtro === 'Todos' || destaque.categoria === filtro)
+
   const lista = useMemo(() => {
     return noticias.filter((n) => {
       if (n.destaque) return false // destaque já tem bloco próprio
@@ -20,6 +23,8 @@ export default function Noticias() {
       return n.categoria === filtro
     })
   }, [filtro])
+
+  const vazio = !mostrarDestaque && lista.length === 0
 
   function handleNewsletter(e) {
     e.preventDefault()
@@ -48,14 +53,47 @@ export default function Noticias() {
         ))}
       </div>
 
-      <NoticiaDestaque noticia={destaque} />
+      {mostrarDestaque && <NoticiaDestaque noticia={destaque} />}
 
       <div className="gz-news-layout">
-        <div className="gz-news-grid">
-          {lista.map((n) => (
-            <CardNoticia key={n.id} noticia={n} />
-          ))}
-        </div>
+        {vazio ? (
+          <div className="gz-empty" role="status">
+            <i className="bi bi-newspaper gz-empty-icon" aria-hidden="true" />
+            <h3 className="gz-empty-title">Nenhuma notícia encontrada</h3>
+            <p className="gz-empty-text">
+              Não há matérias na categoria <strong>{filtro}</strong> no momento.
+            </p>
+            <button
+              type="button"
+              className="btn_outglow"
+              onClick={() => setFiltro('Todos')}
+            >
+              Ver todas as notícias
+            </button>
+          </div>
+        ) : lista.length === 0 ? (
+          <div className="gz-empty" role="status">
+            <i className="bi bi-newspaper gz-empty-icon" aria-hidden="true" />
+            <h3 className="gz-empty-title">Só o destaque nesta categoria</h3>
+            <p className="gz-empty-text">
+              Em <strong>{filtro}</strong> ainda não há outras matérias além do
+              destaque acima.
+            </p>
+            <button
+              type="button"
+              className="btn_outglow"
+              onClick={() => setFiltro('Todos')}
+            >
+              Ver todas as notícias
+            </button>
+          </div>
+        ) : (
+          <div className="gz-news-grid">
+            {lista.map((n) => (
+              <CardNoticia key={n.id} noticia={n} />
+            ))}
+          </div>
+        )}
 
         <aside className="gz-news-aside" aria-label="Complementos">
           <div className="gz-news-aside-card">
