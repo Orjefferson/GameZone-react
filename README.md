@@ -58,6 +58,7 @@ No Netlify: **Build command** `npm run build` · **Publish directory** `dist`. O
 | Hero | `index.html` |
 | Lançamentos | `index.html` |
 | Gêneros | `index.html` |
+| Estatísticas | `index.html` |
 | Notícias (filtros, destaque, cards, aside) | `noticias.html` |
 | Chamada final (`#cta`) | Nova — ponte para a Comunidade |
 | Navbar / Footer | Layout compartilhado do grupo (um menu e um rodapé) |

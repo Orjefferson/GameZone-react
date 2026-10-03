@@ -15,7 +15,7 @@ export default function Hero() {
             e uma comunidade apaixonada por games.
           </p>
           <div className="gz-hero-actions">
-            <a href="#noticias" className="btn_purp">
+            <a href="#lancamentos" className="btn_purp">
               Explorar Jogos &gt;
             </a>
             <a href="#cta" className="btn_outglow">

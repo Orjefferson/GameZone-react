@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="gz-footer">
@@ -7,33 +9,33 @@ export default function Footer() {
         <p>Criando Histórias</p>
         <p>construindo o futuro dos Games.</p>
         <div className="gz-social">
-            <img src="/img/discord.png" alt="Discord" />
-            <img src="/img/instagram.png" alt="Instagram" />
-            <img src="/img/twitter.png" alt="Twitter" />
-            <img src="/img/youtube.png" alt="YouTube" />
+          <img src="/img/discord.png" alt="Discord" />
+          <img src="/img/instagram.png" alt="Instagram" />
+          <img src="/img/twitter.png" alt="Twitter" />
+          <img src="/img/youtube.png" alt="YouTube" />
         </div>
       </div>
 
       <div className="gz-foot-col">
         <h4>Navegação</h4>
         <p>
-          <a href="#lancamentos">Lançamentos</a>
+          <Link to="/#lancamentos">Lançamentos</Link>
           <br />
-          <a href="#noticias">Notícias</a>
+          <Link to="/#noticias">Notícias</Link>
           <br />
-          <a href="#cta">Comunidade</a>
+          <Link to="/comunidade">Comunidade</Link>
           <br />
-          <a href="#cta">Sobre</a>
+          <Link to="/#cta">Sobre</Link>
         </p>
       </div>
 
       <div className="gz-foot-col">
         <p>
-          <a href="#noticias">Reviews</a>
+          <Link to="/#noticias">Reviews</Link>
           <br />
-          <a href="#lancamentos">Próximos Lançamentos</a>
+          <Link to="/#lancamentos">Próximos Lançamentos</Link>
           <br />
-          <a href="#cta">Loja</a>
+          <Link to="/#generos">Loja</Link>
         </p>
       </div>
 

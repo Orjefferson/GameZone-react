@@ -1,5 +1,6 @@
-import generos from '../data/generos'
-import CardGenero from '../components/CardGenero'
+import { Link } from "react-router-dom";
+import generos from "../data/generos";
+import CardGenero from "../components/CardGenero";
 
 export default function Generos() {
   return (
@@ -15,9 +16,9 @@ export default function Generos() {
         ))}
       </div>
 
-      <a href="#generos" className="gz-minicard btn_outglow">
+      <Link to="/#lancamentos" className="gz-minicard btn_outglow">
         Veja todos os Gêneros &gt;
-      </a>
+      </Link>
     </section>
-  )
+  );
 }
